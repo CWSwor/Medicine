@@ -1,0 +1,6 @@
+.advantages {
+  padding: 40px 0 38px;
+}
+.advantages__item {
+  display: flex;
+}

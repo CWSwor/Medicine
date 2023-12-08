@@ -1,0 +1,57 @@
+.method{
+
+    background: $green url("../images/center/bg.png") center/cover no-repeat ;
+    position: relative;
+    &__content{
+      padding: 40px 0;
+
+      &-text{
+        @include text($Gilroy, normal, bold, 24px , 29px, #fff);
+        text-align: center;
+      }
+    }
+}
+
+.doctor-method{
+  padding-bottom: 58px;
+  &__title{
+    @include text($Roboto, normal, bold, 30px , 36px, $green);
+    text-align: center;
+    margin: 54px 0;
+  }
+  &__content{
+    display: flex;
+    column-gap: 55px;
+    margin-bottom: 41px;
+  }
+  &__img{
+    width: 392px;
+    height: 289px;
+    background: $green;
+    border-radius: 20px;
+    position: relative;
+    img{
+      position: absolute;
+      top:16px;
+      left: 16px;
+    }
+  }
+  &__domin{
+    padding-top: 4px ;
+    &-title{
+      @include text($Gilroy, normal, bold, 24px , 26px, $green);
+       margin-bottom: 11px;
+    }
+    &-subtitle{
+      @include text($Gilroy, normal, normal, 22px , 26px, #000);
+      letter-spacing: 0.5px;
+    }
+  }
+  &__content2{
+    padding-bottom: 20px;
+    &-text{
+      @include text($Gilroy, normal, normal, 22px , 26px, #000);
+      letter-spacing: 0.5px;
+    }
+  }
+}

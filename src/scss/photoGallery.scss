@@ -1,0 +1,110 @@
+.photo{
+  padding: 50px 0 95px;
+  &:last-child{
+    padding-bottom: 180px;
+  }
+  &__gallery-title{
+    @include text($Roboto, normal,bold, 30px , 36px, $green);
+    text-align: center;
+    margin-bottom: 62px;
+  }
+  &__title{
+    @include text($Roboto, normal,bold, 34px , 41px, $green);
+    text-align: center;
+    margin-bottom: 53px;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: auto;
+  }
+
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    position: static;
+    margin-top: 0;
+    color: $green;
+  }
+  &__col{
+    width: calc(33.3% - 40px);
+  }
+  &__img{
+    height: 387px;
+  }
+  &__button{
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    column-gap: 170px;
+    align-items: center;
+    &-link{
+      @include text($Gilroy, normal,bold, 24px , 36px, $green);
+      text-decoration: none;
+    }
+  }
+}
+
+.video{
+  &__title{
+    @include text($Roboto, normal,bold, 34px , 41px, $green);
+    text-align: center;
+    margin-bottom: 53px;
+  }
+  &__row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+  &__col{
+    width: calc(33.3% - 40px);
+  }
+  &__img{
+    height: 387px;
+  }
+  &__button{
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    column-gap: 170px;
+    align-items: center;
+    &-link{
+      @include text($Gilroy, normal,bold, 24px , 36px, $green);
+      text-decoration: none;
+    }
+  }
+}

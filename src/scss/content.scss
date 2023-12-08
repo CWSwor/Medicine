@@ -1,0 +1,122 @@
+.content{
+  padding-bottom: 159px;
+  &__row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+  &__center{
+    background: $green ;
+    padding: 25px 0;
+    border-radius: 10px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      background: url(../../src/images/home/bg-fon.png) center/cover no-repeat;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &-text{
+      @include text($Gilroy, normal,bold, 28px , 30px, #fff);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+  }
+  &__col-12{
+    width: 100%;
+  }
+  &__col-9{
+    width: calc(75% - 20px);
+  }
+  &__custom_row{
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+    display: flex;
+  }
+  &__col-4{
+    width: calc(33.3% - 26.6px);
+  }
+  &__col-3{
+    width:calc(25% - 20px) ;
+  }
+  &__inov{
+    padding: 90px 0 90px 28px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    &::before{
+      position: absolute;
+      width: 254px;
+      height: 264px;
+      content: url("../../src/images/content/plus.png");
+      bottom: -10px;
+      right: 0;
+    }
+    &-text{
+      @include text($Gilroy, normal,600, 25px , 30px, #000);
+    }
+  }
+  &__cols3{
+    padding: 30px 15px 0 25px;
+    background: $green;
+    position: relative;
+    border-radius: 10px;
+    height: 273px;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../../src/images/content/bg.png) center/cover no-repeat;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &-text{
+      @include text($Gilroy, normal,600, 22px , 26px, #fff);
+    }
+  }
+  &__problem{
+    padding: 64px 24px 0 24px;
+    position: relative;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    &::before{
+      position: absolute;
+      content: url("../../src/images/content/problem.png");
+      bottom: -5px;
+      left: 0;
+    }
+    &-text{
+      @include text($Gilroy, normal,600, 22px , 26px, #000);
+    }
+  }
+  &__special{
+    padding: 64px 0 141px 28px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    &::before{
+      position: absolute;
+      width: 551px;
+      height: 432px;
+      content: url("../../src/images/content/special.png");
+      bottom: -103px;
+      right: -46px;
+    }
+
+    &-text{
+      @include text($Gilroy, normal,600, 22px , 26px, #000);
+    }
+  }
+}

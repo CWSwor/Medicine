@@ -1,0 +1,143 @@
+@mixin line($top){
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  background: $green;
+  top: $top;
+  left: 0;
+}
+.header{
+  width: 100%;
+  background: white;
+  &__background{
+    width: 100%;
+    background: white;
+    position: relative;
+    z-index: 6;
+  }
+  &__nav{
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+
+  }
+  &__icon{
+    text-decoration: none;
+    margin-right: 27px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__burger{
+    width: 49px;
+    height: 17.59px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &_active &-line{
+      height: 0;
+      &::before{
+        transform: rotate(-45deg);
+        top: 0;
+        transition: .5s;
+      }
+      &::after{
+        transform: rotate(45deg);
+        top: 0;
+        transition: .5s;
+      }
+    }
+    &-line{
+      position: relative;
+      width: 100%;
+      height: 2.5px;
+
+      background: $green;
+      &::before{
+        @include line(-5.5px);
+        transition: .3s;
+      }
+      &::after{
+        @include line(5.5px);
+        transition: .3s;
+      }
+    }
+  }
+  &__block-burger{
+  width: 152px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+@media (max-width: 1440px) {
+  
+}
+@media (max-width: 576px) {
+  .header{
+    &__icon{
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &__logo picture img{
+      width: 130px;
+    }
+    &__burger{
+      width: 40px;
+    }
+    &__block-burger{
+      width: 128px;
+    }
+  }
+
+}
+@media (max-width: 520px) {
+  .header{
+    &__block-burger{
+      width: 83px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .header{
+    &__icon{
+      margin-right: 12px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__block-burger{
+      width: 55px;
+    }
+    &__burger{
+      width: 30px;
+    }
+    &__logo picture img{
+      width: 110px;
+    }
+  }
+}
+@media (max-width: 376px) {
+  .header{
+    &__icon{
+      margin-right: 7px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    &__block-burger{
+      width: 55px;
+    }
+    &__burger{
+      width: 20px;
+    }
+  }
+}

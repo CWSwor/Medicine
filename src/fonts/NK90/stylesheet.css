@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NK90';
+    src: url('./13772.otf');
+    src: local('NK90'), local('NK90'),
+    url('./13772.otf') format('otf');
+    font-style: normal;
+    font-weight: normal;
+}

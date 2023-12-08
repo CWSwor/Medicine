@@ -1,0 +1,73 @@
+@import "../../src/fonts/Gilroy/stylesheet.css";
+@import "../../src/fonts/Roboto/stylesheet.css";
+@import "../../src/fonts/NK90/stylesheet.css";
+@import "../../src/libs/fontello/css/fontello.css";
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$green: #94C31F;
+$Gilroy : Gilroy, sans-serif;
+$Roboto : Roboto, sans-serif;
+$NK90 : NK90, sans-serif;
+
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+@media (max-width: 1200px) {
+  .container{
+    max-width: 1120px;
+  }
+}
+@media (max-width: 992px){
+  .container{
+    max-width: 940px;
+  }
+}
+@media (max-width: 425px) {
+  .container{
+    padding: 0 12px;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+@import "text";
+@import "header";
+@import "main";
+@import "home";
+@import "advantages";
+@import "problem";
+@import "content";
+@import "center";
+@import "certificate";
+@import "staff";
+@import "method";
+@import "photoGallery";
+@import "author";
+@import "contact";

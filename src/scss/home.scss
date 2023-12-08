@@ -1,0 +1,55 @@
+
+.home{
+  padding: 103px 0 63px;
+  width: 100%;
+  background:  $green;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    background: url("../../src/images/home/bg-fon.png") center/100% 100% no-repeat ;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 48%;
+    height: 100%;
+  }
+  &::after{
+    position: absolute;
+    content: '';
+    background: url("../../src/images/home/bg-img.png") center/100% 100% no-repeat ;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 45.7%;
+    height: 100%;
+  }
+  &__title{
+    @include text($Gilroy, normal, bold, 60px , 73px, #fff);
+    margin-bottom: 5px;
+  }
+  &__description{
+    @include text($Gilroy, normal, bold, 25px , 30px, #fff);
+    margin-bottom: 96px;
+  }
+  &__subtitle{
+    @include text($Gilroy, italic, bold, 20px , 24px, #fff);
+    margin-bottom: 78px;
+    letter-spacing: 0.05em;
+  }
+  &__btn{
+    @include text($Gilroy, italic, bold, 20px , 27px, #000);
+    background: #F8F8F8;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    width: 291px;
+    height: 94px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 2;
+  }
+}

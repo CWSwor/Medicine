@@ -1,0 +1,82 @@
+.staff{
+  padding: 50px 0 123px;
+  &__title{
+    @include text($Roboto, normal,bold, 30px , 36px, $green);
+    text-align: center;
+    margin-bottom: 96px;
+  }
+  &__person-block{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 81px;
+
+    &_odd{
+      column-gap: 88px;
+      margin-right:58px;
+    }
+    &_even{
+      column-gap: 126px;
+      margin-left:60px;
+    }
+  }
+  &__image-block{
+    width: 366px;
+    height: 366px;
+    background: $green;
+    border-radius: 50%;
+    position: relative;
+    &_odd::before{
+      position: absolute;
+      content: url("../images/staff/firstLine.png");
+      bottom: -36px;
+      right: -112px;
+    }
+    &_even::before{
+      position: absolute;
+      content: url("../images/staff/evenLine.png");
+      left: -145px;
+      top: 10px;
+    }
+  }
+  &__image{
+    position: absolute;
+    &_odd{
+      left: 29px;
+      top: 9px;
+    }
+    &_even{
+      top: 22px;
+      right: 28px;
+    }
+  }
+  &__description{
+    position: relative;
+
+    width: 439px;
+    height: 252px;
+    padding: 25px 0 0 57px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F1F1F1 100%);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    &_odd{
+      bottom: 36px;
+    }
+    &_even{
+      bottom: 48px;
+    }
+    &-title{
+      @include text($Roboto, normal,bold, 24px , 39px, $green);
+      margin-bottom: 7px;
+    }
+    &-job{
+      @include text($Gilroy, normal,bold, 14px , 22px, #464646);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 42px;
+    }
+    &-subtitle{
+      @include text($Gilroy, normal,bold, 16px , 26px, #7e8085);
+    }
+  }
+}
